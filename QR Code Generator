@@ -1,0 +1,12 @@
+import qrcode
+
+code_qr = qrcode.QRCode(box_size=40, border=5)
+
+code_qr.add_data("https://www.linkedin.com/in/snehasish-pradhan-a32185214/")
+
+code_qr.make(fit=True)
+
+qrcode_img = code_qr.make_image(fill_color="white", back_color="black")
+
+qrcode_img.save("qrgen_img.png")
+
